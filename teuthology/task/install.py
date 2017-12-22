@@ -124,6 +124,7 @@ def _update_deb_package_list_and_install(ctx, remote, debs, config):
     log.info("Installing packages: {pkglist} on remote deb {arch}".format(
         pkglist=", ".join(debs), arch=gitbuilder.arch)
     )
+    gitbuilder.base_url = 'http://10.18.192.63/ceph-deb-xenial-x86_64-basic'
     # get baseurl
     log.info('Pulling from %s', gitbuilder.base_url)
 
